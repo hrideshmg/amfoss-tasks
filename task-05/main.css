@@ -1,0 +1,106 @@
+.main-container {
+    position:absolute;
+    width:100vw;
+    height: 100vh;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-image: url("assets/backdrop.png");
+}
+.shop-container {
+    position:absolute;
+    width:100vw;
+    height: 100vh;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: #0B0B21;
+}
+@font-face {
+    font-family: devil-breeze;
+    src: url("assets/fonts/devil-breeze.ttf")
+}
+@font-face {
+    font-family: bebas-nue;
+    src: url("assets/fonts/bebas-nue.ttf");
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    position:fixed;
+    background-color:#0e142591;
+    width: 100vw;
+    height: 70px;
+    align-items: center;
+
+    left: 0;
+    top: 0;
+}
+
+.navbar-logo {
+    width: 28%;
+    height: auto;
+    margin-left: 15px;
+}
+
+.navbar-social {
+    position: fixed;
+    left: 89%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.navbar-social-items {
+    width: 100%;
+    height: auto;
+}
+
+.splashtextbig {
+    color:white;
+    font-family: devil-breeze;
+    text-align: center;
+    font-size: 76px;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}
+.splashtextsmall {
+    color:white;
+    font-family: devil-breeze;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}
+
+.splash-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 65vh;
+}
+
+.explore-shop-text {
+    font-family: bebas-nue;
+    font-size: 30px;
+}
+
+.explore-shop {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    
+
+    height: 50px;
+    width: 210px;
+    border-radius: 7px;
+    background-color: #2BDAE1;
+}
