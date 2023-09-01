@@ -1,23 +1,3 @@
-.main-container {
-    position:absolute;
-    width:100vw;
-    height: 100vh;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    background-image: url("assets/backdrop.png");
-}
-.shop-container {
-    position:absolute;
-    width:100vw;
-    height: 100vh;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    background-color: #0B0B21;
-}
 @font-face {
     font-family: devil-breeze;
     src: url("assets/fonts/devil-breeze.ttf")
@@ -27,6 +7,14 @@
     src: url("assets/fonts/bebas-nue.ttf");
 }
 
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width:100vw;
+}
+
+body#index {background-image: url("assets/backdrop.png");}
+body#shop {background-color: #0a1b37;}
 
 a {
     text-decoration: none;
@@ -35,14 +23,11 @@ a {
 
 .navbar {
     display: flex;
-    position:fixed;
-    background-color:#0e142591;
+    position:sticky;
+    background-color:#0e1425ad;
     width: 100vw;
     height: 70px;
     align-items: center;
-
-    left: 0;
-    top: 0;
 }
 
 .navbar-logo {
@@ -69,7 +54,6 @@ a {
     font-family: devil-breeze;
     text-align: center;
     font-size: 76px;
-    font-style: normal;
     letter-spacing: 0.1em;
 }
 .splashtextsmall {
@@ -77,7 +61,6 @@ a {
     font-family: devil-breeze;
     text-align: center;
     font-size: 32px;
-    font-style: normal;
     letter-spacing: 0.1em;
 }
 
@@ -103,4 +86,63 @@ a {
     width: 210px;
     border-radius: 7px;
     background-color: #2BDAE1;
+}
+
+.grid-container {
+    justify-content: space-around;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-left: 28vw;
+    margin-right: 28vw;
+}
+
+.grid-item-container {
+    position: relative;
+    width:170px;
+    height:257px;
+    background-color: #0b0b219b;
+    border-radius: 10px;
+}
+
+.grid-footer {
+    position: absolute;
+    background-color: #3345AB;
+    bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 15px;
+    width:170px;
+}
+
+.grid-item-content-container {
+    position: relative;
+    width:170px;
+    height:242px;
+}
+
+.grid-item-img{
+    position:absolute;
+    width:90%;
+    height:auto;
+    align-self: center;
+    justify-self: center;
+}
+
+.grid-item-text {
+    position: absolute;
+    font-family: bebas-nue;
+    bottom: 35px;
+    font-size: 22px;
+    margin-left: 20px;
+    margin-right:25px;
+}
+
+.grid-item-text-price {
+    position: absolute;
+    bottom: 3px;
+    font-family: bebas-nue;
+    font-size: 20px;
+    margin-left: 20px;
 }
