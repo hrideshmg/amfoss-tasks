@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Weather Checker",
+  "description": "Finds the current weather at a given location",
+  "version": "1.0",
+  "action": {
+    "default_popup": "weather.html",
+    "default_icon": "assets/weather.png"
+  }
+}
