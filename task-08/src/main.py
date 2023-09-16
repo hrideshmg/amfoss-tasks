@@ -1,6 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QWidget
-from PySide6.QtGui import QPixmap, QMovie
+from PySide6.QtGui import QMovie
 from PySide6.QtCore import Slot
 from search_window import SearchWindow
 
@@ -46,7 +46,7 @@ class SplashScreen(QWidget):
                 font-size: 32px;
             }
             QPushButton:hover {
-                background-color: #02fdfe
+                background-color: #02fdfe;
                 color: dark-grey;
             }
         """
