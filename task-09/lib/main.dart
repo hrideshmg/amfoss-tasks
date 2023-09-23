@@ -31,10 +31,10 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// In flutter the state of the app is separated from the widget
+// In flutter the state of the app is separate from the widget
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
-  // createState is a is a method that returns an instance of a state class (MapScreenState in this case)
+  // createState is a is a method that returns an instance of a state class (MapScreenState() in this case)
   // MapScreenState before createState specifies the return type of createState (similar to using void)
   @override
   MapScreenState createState() => MapScreenState();
@@ -42,11 +42,13 @@ class MapScreen extends StatefulWidget {
 
 class MapScreenState extends State<MapScreen> with OSMMixinObserver {
   late MapController mapController;
+  late GeoPoint initPosition;
 
+  // Saves and displays the users current position
   @override
   Future<void> mapIsReady(bool isReady) async {
     if (isReady) {
-      GeoPoint initPosition = await mapController.myLocation();
+      initPosition = await mapController.myLocation();
       mapController.addMarker(initPosition,
           markerIcon: const MarkerIcon(
               icon: Icon(Icons.location_on, color: Colors.green)));
@@ -58,13 +60,11 @@ class MapScreenState extends State<MapScreen> with OSMMixinObserver {
     mapController = Provider.of<MapController>(context);
     mapController.addObserver(this);
     StatModel stats = Provider.of(context,
-        listen:
-            false); // listen needs to be false for providers to work within initState() to prevent rebuilding
+        listen: false); // listen needs to be false prevent rebuilding
 
     mapController.listenerMapSingleTapping.addListener(() async {
-      mapController.removeLastRoad();
       if (mapController.listenerMapSingleTapping.value != null) {
-        GeoPoint initPosition = await mapController.myLocation();
+        mapController.removeLastRoad();
         GeoPoint destPosition = mapController.listenerMapSingleTapping
             .value!; // the ! assures that the value will never be null
         RoadInfo journey = await mapController.drawRoad(
@@ -105,12 +105,16 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var stats = Provider.of<StatModel>(context);
-    MapController mapController = Provider.of<MapController>(context);
+    final stats = Provider.of<StatModel>(context);
+    final MapController mapController = Provider.of<MapController>(context);
 
     if (stats.time != null && stats.distance != null) {
-      var hours = stats.time! ~/ 3600;
-      var mins = (stats.time! % 3600) ~/ 60;
+      final hours = stats.time! ~/ 3600;
+      final mins = (stats.time! % 3600) ~/ 60;
+      const TextStyle headingStyle = TextStyle(
+          color: Colors.white, fontSize: 23, fontWeight: FontWeight.w600);
+      const TextStyle statStyle = TextStyle(color: Colors.white, fontSize: 20);
+
       return Container(
         color: Colors.green,
         height: 75,
@@ -135,16 +139,8 @@ class BottomBar extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 40),
                       child: Column(
                         children: [
-                          const Text(
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 23,
-                              ),
-                              "Time"),
-                          Text(
-                              style: const TextStyle(
-                                  color: Colors.white, fontSize: 20),
-                              "$hours:$mins")
+                          const Text(style: headingStyle, "Time"),
+                          Text(style: statStyle, "$hours:$mins Hours")
                         ],
                       ),
                     ),
@@ -152,13 +148,9 @@ class BottomBar extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 10, left: 165),
                       child: Column(
                         children: [
-                          const Text(
-                              style:
-                                  TextStyle(fontSize: 23, color: Colors.white),
-                              "Distance"),
+                          const Text(style: headingStyle, "Distance"),
                           Text(
-                              style: const TextStyle(
-                                  fontSize: 20, color: Colors.white),
+                              style: statStyle,
                               "${stats.distance!.toStringAsFixed(2)} km")
                         ],
                       ),
