@@ -4,7 +4,6 @@ def isSorted(arr: list):
 def isElegant(arr: list):
     if isSorted(arr): return True
     else:
-        last_element = arr[-1]
         for i in range(1, len(arr)):
             test_series = arr.copy()
             test_series.extend(arr[0:i])
