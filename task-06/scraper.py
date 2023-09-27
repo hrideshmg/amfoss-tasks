@@ -134,7 +134,6 @@ class Scraper:
                 "p",
                 class_="ds-text-tight-s ds-font-regular ds-truncate ds-text-typo",
             )
-            print(status)
             time_data = status.find("span")
             # Cleans up the upcoming match string
             return " ".join([x.strip() for x in time_data.get_text().split()]).lower()
