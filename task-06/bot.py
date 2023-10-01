@@ -111,11 +111,11 @@ async def history(interaction: discord.Interaction):
     await interaction.response.send_message(file=file)
 
 
-@client_tree.command(description="Get information about CricketMaid")
+@client_tree.command(description="Get information about the bot")
 async def help(interaction: discord.Interaction):
     description = cleandoc(
         """
-    CricketMaid is a discord bot written in python using discord.py that makes use of beautifulsoup4 to scrape realtime cricket data from https://www.espncricinfo.com/
+    This is a discord bot written in python using discord.py that makes use of beautifulsoup4 to scrape realtime cricket data from https://www.espncricinfo.com/
     It makes use of the slash commands feature of discord in order to provide an easy to use interface.
     
     **Commands**
