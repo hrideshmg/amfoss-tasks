@@ -13,3 +13,22 @@ I wish to work on some truly big projects, I've got a solid understanding of cre
 Apart from that, I want to expand my network and meet passionate developers both offline and online, I believe that creating a reputation in FOSS communities is a good way to do this.
 ## Praveshan Process Feedback
 Praveshan was the most well thought out and executed recruitment process that I've seen in my life, everything from the creative task briefs to the use of discord was just perfect and I have no complaints or feedback to offer in that regard. 
+
+**Tasks List**|**Description**|**Status**
+--------------|---------------|----------
+Task-00|Installing Ubuntu|Completed
+Task-01|Terminal Wizard|Completed
+Task-02|Lessgo Hugo|Completed
+Task-03|Hello, World!|Completed 
+Task-04|Competitive Programming|Completed 8/10 
+Task-05|Hypertext Mockup Language|Completed
+Task-06|Cricket Vault|Completed
+Task-07|Ak-47 °C|Completed
+Task-08|Poke-Search!|Completed
+Task-09|GeoQuest|Completed
+Task-10|RuskOS|Completed
+Task-11|TinkerCAD|Unattempted
+Task-12|Godot|Completed
+Task-13|Vim|Completed
+Task-14|Bandit|Completed
+Task-15|Project Euler| Unattempted
