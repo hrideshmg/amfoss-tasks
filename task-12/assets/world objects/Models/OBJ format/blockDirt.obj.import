@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cagmpiqyn6a1q"
+path="res://.godot/imported/blockDirt.obj-c2840719c082a2a13ea397ceb401cfa2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockDirt.obj-c2840719c082a2a13ea397ceb401cfa2.mesh"]
+
+source_file="res://assets/world objects/Models/OBJ format/blockDirt.obj"
+dest_files=["res://.godot/imported/blockDirt.obj-c2840719c082a2a13ea397ceb401cfa2.mesh", "res://.godot/imported/blockDirt.obj-c2840719c082a2a13ea397ceb401cfa2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

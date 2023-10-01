@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvwnr8016ixlc"
+path="res://.godot/imported/spikeBlock.obj-5ec8d0c1b0c36e645248dfc74e058acf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spikeBlock.obj-5ec8d0c1b0c36e645248dfc74e058acf.mesh"]
+
+source_file="res://assets/world objects/Models/OBJ format/spikeBlock.obj"
+dest_files=["res://.godot/imported/spikeBlock.obj-5ec8d0c1b0c36e645248dfc74e058acf.mesh", "res://.godot/imported/spikeBlock.obj-5ec8d0c1b0c36e645248dfc74e058acf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://c051t6vxkpeak"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_0i0ur"]
+[ext_resource type="FontFile" uid="uid://iws27ui86je7" path="res://assets/font style/kenvector_future_thin.ttf" id="2_76d8x"]
+[ext_resource type="Script" path="res://scripts/stopwatch.gd" id="3_i7in2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gutfx"]
+font = ExtResource("2_76d8x")
+font_size = 65
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.796078)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e4yf6"]
+font = ExtResource("2_76d8x")
+font_size = 65
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.835294)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u3dqy"]
+font = ExtResource("2_76d8x")
+font_size = 65
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.733333)
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_0i0ur")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control"]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+
+[node name="stopwatch" type="Label" parent="Control/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_gutfx")
+script = ExtResource("3_i7in2")
+
+[node name="finish_text" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -405.5
+offset_top = -75.0
+offset_right = 405.5
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Congrats, You Finished The Level!
+Seconds Taken:
+Press R To Retry"
+label_settings = SubResource("LabelSettings_e4yf6")
+horizontal_alignment = 1
+
+[node name="finish_time" type="Label" parent="finish_text"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 291.0
+offset_top = -40.5
+offset_right = 585.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+label_settings = SubResource("LabelSettings_u3dqy")

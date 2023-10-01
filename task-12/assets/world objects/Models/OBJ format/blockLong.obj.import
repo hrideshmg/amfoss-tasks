@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vyutwrcx0sdp"
+path="res://.godot/imported/blockLong.obj-357dfd1945faca3c8bf15dac0054351f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blockLong.obj-357dfd1945faca3c8bf15dac0054351f.mesh"]
+
+source_file="res://assets/world objects/Models/OBJ format/blockLong.obj"
+dest_files=["res://.godot/imported/blockLong.obj-357dfd1945faca3c8bf15dac0054351f.mesh", "res://.godot/imported/blockLong.obj-357dfd1945faca3c8bf15dac0054351f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
